@@ -23,11 +23,34 @@ const  showData = items => {
             <h2 class="card-title">${element.strTeam}</h2>
             <p>${element.strAlternate}</p>
             <div class="card-actions">
-              <button class="btn btn-primary">Details</button>
+            <!-- The button to open modal -->
+            <label for="${element.strTeam}" class="btn modal-button">Details</label>
+            
+            <!-- Put this part before </body> tag -->
+            <input type="checkbox" id="${element.strTeam}" class="modal-toggle" />
+            <div class="modal">
+              <div class="modal-box">
+              <figure class="px-10 pt-10">
+            <img
+              src="${element.strStadiumThumb}"
+              alt="Shoes"
+              class="rounded-xl w-7/12"
+            />
+          </figure>
+                <h3 class="font-bold text-lg">${element.strAlternate}</h3>
+                <p class="py-4">${element.strStadiumDescription}</p>
+                <div class="modal-action">
+                  <label for="${element.strTeam}" class="btn">Cancel</label>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
         `;
+        const teamDetails = () => {
+
+        }
         leagueDisplay.appendChild(div);
     });
 }
