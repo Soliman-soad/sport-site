@@ -7,7 +7,6 @@ const loadLeague = () => {
 
 const  showData = items => {
     const leagueDisplay = document.getElementById('league-section');
-    console.log(items);
     items.forEach(element => {
         const div = document.createElement('div');
         div.innerHTML = `
